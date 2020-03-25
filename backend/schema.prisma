@@ -1,0 +1,25 @@
+datasource db {
+    provider = "postgresql"
+    url = "postgresql://postgres:1234@localhost:5432/semanaomnistack11"
+}
+
+model Ong {
+    id  Int @id @default(autoincrement())
+    name    String
+    email   String @unique
+    password    String
+    uf  String
+    city String
+}
+
+model Incident {
+    id  Int @id @default(autoincrement())
+    title String
+    description String
+    value   Float
+    ong     Ong 
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
