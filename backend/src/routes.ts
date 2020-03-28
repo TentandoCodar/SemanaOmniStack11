@@ -17,4 +17,6 @@ router.post('/incidents',AuthMiddleware.ignite , IncidentsController.store);
 router.delete('/incidents/:id', AuthMiddleware.ignite, IncidentsController.delete);
 router.get('/incidents', IncidentsController.index);
 
+router.post('/verifyLogin', SessionController.loginTest);
+
 export default router;

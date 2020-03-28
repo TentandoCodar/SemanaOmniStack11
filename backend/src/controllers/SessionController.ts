@@ -27,6 +27,16 @@ class SessionController {
         });
         return res.json({token});
     }
+
+    async loginTest(req,res) {
+        console.log(req.headers)
+        const authorization = req.headers.authorization.split(' ')[1];
+        jwt.verify(authorization, process.env.SECRET_KEY.toString(), (err,decoded) => {
+            if(err) return res.status(403).json({error: "Unauthorized"});
+            req.ong = decoded;
+            return res.status(200).send();
+        });
+    }
 }
 
 
