@@ -11,6 +11,7 @@
 #### JsonWebToken with authentication method
 #### bcryptjs to hash and compare password
 #### Cors
+#### Dotenv
 
 ### Frontend (React with typescript template)
 
