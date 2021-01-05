@@ -16,7 +16,7 @@
     "@types/axios": "^0.14.0",
     "@types/react-navigation": "^3.4.0",
     "@types/styled-components": "^5.0.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "react": "16.11.0",
     "react-native": "0.62.0",
     "react-native-gesture-handler": "^1.6.1",
